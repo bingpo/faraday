@@ -13,14 +13,14 @@
         <meta name="author" content="Faradaysec">
       
       
-        <link rel="canonical" href="https://faradaysec.com/Users/">
+        <link rel="canonical" href="https://faradaysec.com/Filters/">
       
       <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Users - Faraday</title>
+        <title>Filters - Faraday</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#users" class="md-skip">
+        <a href="#filters" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Users
+              Filters
             
           </span>
         </div>
@@ -1405,23 +1405,62 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#roles" class="md-nav__link">
-    Roles
+  <a href="#making-search-queries" class="md-nav__link">
+    Making search queries
   </a>
+  
+    <nav class="md-nav" aria-label="Making search queries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filters_1" class="md-nav__link">
+    filters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage-vulns-aka-status-report-fields" class="md-nav__link">
+    Manage vulns (aka status report) fields
+  </a>
+  
+    <nav class="md-nav" aria-label="Manage vulns (aka status report) fields">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#some-examples" class="md-nav__link">
+    Some examples
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-user-management" class="md-nav__link">
-    Advanced user management
+  <a href="#hosts" class="md-nav__link">
+    HOSTS
+  </a>
+  
+    <nav class="md-nav" aria-label="HOSTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#manage-hosts-fields" class="md-nav__link">
+    Manage hosts fields
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#ldapad-integration" class="md-nav__link">
-    LDAP/AD Integration
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1437,53 +1476,496 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/infobyte/faraday/edit/master/docs/Users.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/infobyte/faraday/edit/master/docs/Filters.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h1>
-<hr />
-<p>During the Faraday Server setup process an administrator user is created. Default username is <em>faraday</em> and the password will be created randomly. Store this password to be able to change it later on if needed. </p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>If you wish to change your password, run faraday-manage change-password. </p>
-</div>
-<p>To manage users start a session in the Web UI and then click on the Faraday slider menu on the right of the screen and then on Users : </p>
-<p><img alt="" src="../images/users/menu.png" /></p>
-<p>A list containing all the users will show up, including buttons to create, edit or delete.</p>
-<h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
-<p>Faraday supports four types of Roles with different levels of access to the application.</p>
-<ul>
-<li>
-<p>Admin: This role lets the administrator manipulate options regarding users, workspaces, vulnerabilities, reports, etc.</p>
-</li>
-<li>
-<p>Pentester: This role is allowed to access permitted workspaces and create, edit or erase vulnerabilities.</p>
-</li>
-<li>
-<p>Asset Owner: This role is similar to the Client role, but can modify Vulnerabilities' Status and add Comments, so it's useful for people working in remediation. </p>
-</li>
-<li>
-<p>Client: This role is allowed to access permitted workspaces without being able to modify anything.</p>
-</li>
-</ul>
-<p><img alt="" src="../images/users/users.gif" /></p>
-<h2 id="advanced-user-management">Advanced user management<a class="headerlink" href="#advanced-user-management" title="Permanent link">&para;</a></h2>
-<p>You have further options for user management available by using the  faraday-manage  command inside your Faraday Server instance. With said command, you can</p>
-<ul>
-<li>
-<p>change-password: Changes the password of a user.</p>
-</li>
-<li>
-<p>create-superuser: Create ADMIN user for your Faraday instance.</p>
-</li>
-<li>
-<p>rename-user: Change username of a user.</p>
-</li>
-</ul>
-<h2 id="ldapad-integration">LDAP/AD Integration<a class="headerlink" href="#ldapad-integration" title="Permanent link">&para;</a></h2>
-<p>You can also enhance your User management inside Faraday with our LDAP/Active Directory integration. More information available <a href="../LDAP/">here</a>. </p>
+                <h1 id="filters">Filters<a class="headerlink" href="#filters" title="Permanent link">&para;</a></h1>
+<h3 id="making-search-queries">Making search queries<a class="headerlink" href="#making-search-queries" title="Permanent link">&para;</a></h3>
+<p>Clients can make GET requests on individual instances of a model (for example, GET /api/person/1) and on collections of all instances of a model (GET /api/person). To get all instances of a model that meet some criteria, clients can make GET requests with a query parameter specifying a search. The search functionality in Flask-Restless is relatively simple, but should suffice for many cases.</p>
+<p>Quick examples
+The following are some quick examples of creating search queries with different types of clients. Find more complete documentation in subsequent sections. In these examples, each client will search for instances of the model Person whose names contain the letter “y”.</p>
+<p>Using the Python requests library:</p>
+<h5 id="filters_1">filters<a class="headerlink" href="#filters_1" title="Permanent link">&para;</a></h5>
+<p>A list of objects of one of the following forms:</p>
+<p><code>{"name": &lt;fieldname&gt;, "op": &lt;operatorname&gt;, "val": &lt;argument&gt;}</code></p>
+<p>or:</p>
+<p><code>{"name": &lt;fieldname&gt;, "op": &lt;operatorname&gt;, "field": &lt;fieldname&gt;}</code></p>
+<p>In the first form, <code>&lt;operatorname&gt;</code> is one of the strings described in the Operators section, the first <code>&lt;fieldname&gt;</code> is the name of the field of the model to which to apply the operator,<code>&lt;argument&gt;</code>is a value to be used as the second argument to the given operator. In the second form, the second <code>&lt;fieldname&gt;</code> is the field of the model that should be used as the second argument to the operator.</p>
+<p><code>&lt;fieldname&gt;</code> may alternately specify a field on a related model, if it is a string of the form <code>&lt;relationname&gt;__&lt; fieldname&gt;</code>.</p>
+<p>If the field name is the name of a relation and the operator is <code>has</code> or <code>any</code>, the <code>val</code> argument can be a dictionary with the arguments representing another filter to be applied as the argument for <code>has</code> or <code>any</code>.</p>
+<p>The returned list of matching instances will include only those instances that satisfy all of the given filters.</p>
+<p>Filter objects can also be arbitrary Boolean formulas. For example:</p>
+<p><div class="highlight"><pre><span></span><code>{&quot;or&quot;: [&lt;filterobject&gt;, {&quot;and&quot;: [&lt;filterobject&gt;, ...]}, ...]}
+</code></pre></div>
+<code>limit</code></p>
+<p>A positive integer which specifies the maximum number of objects to return.</p>
+<p><code>offset</code></p>
+<p>A positive integer which specifies the offset into the result set of the returned list of instances.</p>
+<p><code>order_by</code></p>
+<p>A list of objects of the form:</p>
+<p><div class="highlight"><pre><span></span><code>{&quot;field&quot;: &lt;fieldname&gt;, &quot;direction&quot;: &lt;directionname&gt;}
+</code></pre></div>
+where <code>&lt;fieldname&gt;</code> is a string corresponding to the name of a field of the requested model and <code>&lt;directionname&gt;</code> is 
+either <code>asc</code> for ascending order or <code>desc</code> for descending order.</p>
+<p><code>&lt;fieldname&gt;</code> may alternately specify a field on a related model, 
+if it is a string of the form <code>&lt;relationname&gt;__&lt;fieldname&gt;</code>.</p>
+<p><code>group_by</code></p>
+<p>A list of objects of the form:</p>
+<p><code>{"field": &lt;fieldname&gt;}</code></p>
+<p>where <code>&lt;fieldname&gt;</code> is a string corresponding to the name of a field of the requested model.</p>
+<p><code>&lt;fieldname&gt;</code> may alternately specify a field on a related model, if it is a string of the form <code>&lt;relationname&gt;__&lt;fieldname&gt;</code>.</p>
+<p><code>single</code></p>
+<p>A Boolean representing whether a single result is expected as a result of the search. If this is true and either no results or multiple results meet the criteria of the search, the server responds with an error message.
+If a filter is poorly formatted (for example, op is set to '==' but val is not set), the server responds with 400 Bad Request.</p>
+<p>Changed in version 0.17.0: Removed the disjunction mapping in favor of a more robust Boolean expression system.</p>
+<p><code>Operators</code></p>
+<p>The operator strings recognized by the API incude:</p>
+<div class="highlight"><pre><span></span><code>==, eq, equals, equals_to
+!=, neq, does_not_equal, not_equal_to
+&gt;, gt, &lt;, lt
+&gt;=, ge, gte, geq, &lt;=, le, lte, leq
+in, not_in
+is_null, is_not_null
+like
+ilike
+has
+any
+</code></pre></div>
+<h4 id="manage-vulns-aka-status-report-fields">Manage vulns (aka status report) fields<a class="headerlink" href="#manage-vulns-aka-status-report-fields" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Field Type</th>
+<th>Valid Operators</th>
+<th>Confirmed Working</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>description</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>severity</td>
+<td><code>severities enum</code></td>
+<td><code>eq</code>, <code>neq</code></td>
+<td></td>
+</tr>
+<tr>
+<td>target</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>service</td>
+<td><code>relationship</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>service.name</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>service.port</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+<td></td>
+</tr>
+<tr>
+<td>easeofresolution (ease_of_resolution in model)</td>
+<td><code>ease_of_resolutions enum</code></td>
+<td><code>eq</code>, <code>neq</code></td>
+<td></td>
+</tr>
+<tr>
+<td>references (reference_instances in model)</td>
+<td><code>relationship</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>references.name</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>resolution</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>request</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>method</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>response</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>pname (parameter_name en el modelo)</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>params (parameters en el model)</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>path</td>
+<td>string</td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>query (query_string en el modelo)</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>website</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>creator</td>
+<td><code>relationship</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>creator.username</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+<td></td>
+</tr>
+<tr>
+<td>type</td>
+<td><code>vuln_types enum</code></td>
+<td><code>eq</code>, <code>neq</code></td>
+<td></td>
+</tr>
+<tr>
+<td>confirmed</td>
+<td><code>boolean</code></td>
+<td><code>eq</code>, <code>neq</code></td>
+<td></td>
+</tr>
+<tr>
+<td>id</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>, <code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Data types</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 1</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 2</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 3</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 4</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 5</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 6</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 7</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 8</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;"> 9</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">10</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">11</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">12</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">13</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">14</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">15</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">16</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">17</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">18</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">19</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">20</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">21</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">22</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">23</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">24</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">25</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">26</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">27</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">28</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">29</span>
+<span style="color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px;">30</span></pre></div></td><td class="code"><div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><code>boolean = [ true, True, false, False ]
+
+EASE_OF_RESOLUTIONS = [
+    &#39;trivial&#39;,
+    &#39;simple&#39;,
+    &#39;moderate&#39;,
+    &#39;difficult&#39;,
+    &#39;infeasible&#39;
+]
+
+VULN_TYPES = [
+    &#39;vulnerability&#39;,
+    &#39;vulnerability_web&#39;,
+    &#39;vulnerability_code&#39;
+]
+
+SEVERITIES = [
+    &#39;critical&#39;,
+    &#39;high&#39;,
+    &#39;medium&#39;,
+    &#39;low&#39;,
+    &#39;informational&#39;,
+    &#39;unclassified&#39;,
+]
+
+STATUS = [
+    &#39;open&#39;,
+    &#39;closed&#39;,
+    &#39;filtered&#39;
+]
+</code></pre></div>
+</td></tr></table>
+<h5 id="some-examples">Some examples<a class="headerlink" href="#some-examples" title="Permanent link">&para;</a></h5>
+<p>Endpoint</p>
+<p><code>http://localhost:5985/_api/v2/ws/testws1/vulns/filter?q={"filters": [...]}</code></p>
+<p>Basic one</p>
+<p><code>name == "test 1"</code>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> 
+                    <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>  
+                   <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;test1&quot;</span> 
+                <span class="p">}</span>
+               <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+With <code>and</code></p>
+<p><code>severity == medium</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> 
+                    <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>  
+                   <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;test1&quot;</span> 
+                <span class="p">},</span>
+                <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;severity&quot;</span><span class="p">,</span>  
+                    <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>
+                   <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;medium&quot;</span> 
+                <span class="p">}</span> 
+              <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>A bit complex one</p>
+<p><code>name like "t%" and (severity == "critical" or severity == "medium")</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;like&quot;</span><span class="p">,</span> <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;t%&quot;</span>  <span class="p">},</span> 
+                <span class="p">{</span>  <span class="nt">&quot;or&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                     <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;severity&quot;</span><span class="p">,</span>    <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>    <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;medium&quot;</span>  <span class="p">}</span> <span class="p">,</span>
+                     <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;severity&quot;</span><span class="p">,</span>    <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>    <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;critical&quot;</span>  <span class="p">}</span>
+                  <span class="p">]</span> 
+                 <span class="p">}</span> 
+            <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>With case insensitive logic and fields with relationships</p>
+<p><code>name ilike "%php%" and (service.name like "%http%" or service.port eq 80)</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;ilike&quot;</span><span class="p">,</span> <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;%php%&quot;</span>  <span class="p">},</span> 
+                <span class="p">{</span>  <span class="nt">&quot;or&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                     <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;service&quot;</span><span class="p">,</span> 
+                        <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;has&quot;</span><span class="p">,</span>  
+                        <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;like&quot;</span><span class="p">,</span>  <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;%http%&quot;</span> <span class="p">}</span> 
+                      <span class="p">}</span> <span class="p">,</span>
+                     <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;service&quot;</span><span class="p">,</span> 
+                        <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;has&quot;</span><span class="p">,</span>  
+                       <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;port&quot;</span><span class="p">,</span> <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>  <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span> <span class="p">}</span> 
+                     <span class="p">}</span>
+                   <span class="p">]</span> 
+                <span class="p">}</span> 
+            <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Previous filters but just the ones created by user <code>faraday</code></p>
+<p><code>name ilike "php%" and (service.name like "%http%" or service.port eq 80) and creator.username == 'faraday'</code></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span> <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;creator&quot;</span><span class="p">,</span> 
+                    <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;has&quot;</span><span class="p">,</span>
+                   <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;username&quot;</span><span class="p">,</span> <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>  <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;faraday&quot;</span> <span class="p">}</span> <span class="p">}</span> <span class="p">,</span>
+                <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;ilike&quot;</span><span class="p">,</span> <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;%php%&quot;</span>  <span class="p">},</span> 
+                <span class="p">{</span>  <span class="nt">&quot;or&quot;</span><span class="p">:</span> <span class="p">[</span> 
+                     <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;service&quot;</span><span class="p">,</span> 
+                        <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;has&quot;</span><span class="p">,</span>  
+                        <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;like&quot;</span><span class="p">,</span>  <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;%http%&quot;</span> <span class="p">}</span> 
+                      <span class="p">}</span> <span class="p">,</span>
+                     <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;service&quot;</span><span class="p">,</span> 
+                        <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;has&quot;</span><span class="p">,</span>  
+                       <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;port&quot;</span><span class="p">,</span> <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span>  <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span> <span class="p">}</span> 
+                     <span class="p">}</span>
+                   <span class="p">]</span> 
+                <span class="p">}</span> 
+            <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="hosts">HOSTS<a class="headerlink" href="#hosts" title="Permanent link">&para;</a></h3>
+<h4 id="manage-hosts-fields">Manage hosts fields<a class="headerlink" href="#manage-hosts-fields" title="Permanent link">&para;</a></h4>
+<p>Endpoint</p>
+<p><code>http://localhost:5985/_api/v2/ws/testws1/hosts/filter?q={"filters": [..]</code></p>
+<table>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Field Type</th>
+<th>Valid Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ip</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+</tr>
+<tr>
+<td>hostnames</td>
+<td><code>relationship</code></td>
+<td></td>
+</tr>
+<tr>
+<td>hostnames.name</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+</tr>
+<tr>
+<td>services</td>
+<td><code>relationship</code></td>
+<td></td>
+</tr>
+<tr>
+<td>services.name</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+</tr>
+<tr>
+<td>services.port</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+</tr>
+<tr>
+<td>services.status</td>
+<td><code>status enum</code></td>
+<td><code>eq</code>, <code>neq</code></td>
+</tr>
+<tr>
+<td>os</td>
+<td><code>string</code></td>
+<td><code>all</code></td>
+</tr>
+<tr>
+<td>owned</td>
+<td><code>boolean</code></td>
+<td><code>eq</code>, <code>neq</code></td>
+</tr>
+<tr>
+<td>vulnerability_critical_generic_count</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+</tr>
+<tr>
+<td>vulnerability_high_generic_count</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+</tr>
+<tr>
+<td>vulnerability_medium_generic_count</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+</tr>
+<tr>
+<td>vulnerability_low_generic_count</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+</tr>
+<tr>
+<td>vulnerability_info_generic_count</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+</tr>
+<tr>
+<td>vulnerability_unclassified_generic_count</td>
+<td><code>number</code></td>
+<td><code>eq</code>, <code>neq</code>, <code>&gt;</code>,<code>&gt;=</code>, <code>&lt;</code>, <code>&lt;=</code></td>
+</tr>
+</tbody>
+</table>
+<p>Some examples</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span> <span class="nt">&quot;and&quot;</span><span class="p">:</span>  <span class="p">[</span>
+              <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;hostnames&quot;</span><span class="p">,</span> 
+                  <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;any&quot;</span><span class="p">,</span> 
+                 <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;name&quot;</span><span class="p">,</span> 
+                            <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> 
+                           <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;asdf1&quot;</span> 
+                        <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">]</span> 
+      <span class="p">}</span> 
+  <span class="p">]</span> 
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span> <span class="nt">&quot;and&quot;</span><span class="p">:</span>  <span class="p">[</span>
+              <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;services&quot;</span><span class="p">,</span> 
+                  <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;any&quot;</span><span class="p">,</span> 
+                 <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;port&quot;</span><span class="p">,</span> 
+                            <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;eq&quot;</span><span class="p">,</span> 
+                           <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;80&quot;</span> 
+                        <span class="p">}</span>
+              <span class="p">}</span>
+          <span class="p">]</span> 
+      <span class="p">}</span> 
+  <span class="p">]</span> 
+<span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;filters&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span> <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;ip&quot;</span><span class="p">,</span> 
+                    <span class="nt">&quot;op&quot;</span><span class="p">:</span> <span class="s2">&quot;like&quot;</span><span class="p">,</span>  
+                   <span class="nt">&quot;val&quot;</span><span class="p">:</span> <span class="s2">&quot;192.168.0.%&quot;</span> 
+                <span class="p">}</span>
+               <span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               

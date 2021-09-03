@@ -877,13 +877,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#faraday-server" class="md-nav__link">
-    Faraday Server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#faraday-cli" class="md-nav__link">
     Faraday CLI
   </a>
@@ -1088,13 +1081,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
       
       <label class="md-nav__link" for="__nav_4_5">
-        Extensions
+        Extras
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Extensions" data-md-level="2">
+      <nav class="md-nav" aria-label="Extras" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
-          Extensions
+          Extras
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1201,10 +1194,49 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_5" type="checkbox" id="__nav_4_6_5" >
+      
+      <label class="md-nav__link" for="__nav_4_6_5">
+        LDAP
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="LDAP" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          LDAP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../LDAP/" class="md-nav__link">
-        LDAP
+        LDAP Configuration
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LDAP-OKTA/" class="md-nav__link">
+        LDAP with OKTA
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1429,13 +1461,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#faraday-server" class="md-nav__link">
-    Faraday Server
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#faraday-cli" class="md-nav__link">
     Faraday CLI
   </a>
@@ -1474,12 +1499,10 @@
                 
                 
                 <h1 id="technical-introduction">Technical introduction<a class="headerlink" href="#technical-introduction" title="Permanent link">&para;</a></h1>
-<p>Faraday is a web application, the Server is made with python using Flask and the frontend is made with AngularJS (<strong>we are moving to ReactJS</strong>). It is deployed as a standard WSGI application. Its possible to interact with the Server using <a href="./faraday-cli">Faraday CLI</a> and you can <strong>automatize tool usage</strong> with <a href="../agents/">Faraday agent</a>.</p>
-<p><img alt="Faraday architecture overview" src="../images/architecture/Faraday_Architecture.jpg" /></p>
-<h2 id="faraday-server">Faraday Server<a class="headerlink" href="#faraday-server" title="Permanent link">&para;</a></h2>
-<p>Faraday is accessed by a Web Browser or the Faraday CLI. Both clients communicate with Faraday Server via its <a href="https://api.faradaysec.com/">REST API</a>. </p>
+<p>Faraday is a web application, the Server is made with python using Flask and the frontend is made with AngularJS (<strong>we are moving to ReactJS</strong>). It is deployed as a standard WSGI application. Its possible to interact with the Server using <a href="../faraday-cli/">Faraday CLI</a> and you can <strong>automatize tool usage</strong> with <a href="../agents/">Faraday agent</a>.</p>
+<p><img alt="Faraday architecture overview" src="../images/architecture/Faraday_Architecture.png" /></p>
 <p>The data is persisted within a PostgreSQL database, processed with python libraries as SQLAlchemy and Marshmallow.</p>
-<p>The server has other main components as <a href="/Executive-Report/">the Report Processor</a>, or the Websocket Server. The latter provides information to the CLI and the Agents.</p>
+<p>The server has other main components as <a href="../Report/">the Report Processor</a>, or the Websocket Server. The latter provides information to the CLI and the Agents.</p>
 <h2 id="faraday-cli">Faraday CLI<a class="headerlink" href="#faraday-cli" title="Permanent link">&para;</a></h2>
 <p>Faraday CLI provides an interface for interacting with a terminal that allows the user to execute commands which results will be loaded inside Faraday Server. 
 The CLI also allows the user to upload tool reports, create workspaces and configure your instance.</p>

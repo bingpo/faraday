@@ -13,14 +13,14 @@
         <meta name="author" content="Faradaysec">
       
       
-        <link rel="canonical" href="https://faradaysec.com/Users/">
+        <link rel="canonical" href="https://faradaysec.com/LDAP-OKTA/">
       
       <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>Users - Faraday</title>
+        <title>LDAP with OKTA - Faraday</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#users" class="md-skip">
+        <a href="#ldap-with-okta" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Users
+              LDAP with OKTA
             
           </span>
         </div>
@@ -817,14 +817,16 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Using Faraday
@@ -1068,12 +1070,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6" type="checkbox" id="__nav_4_6" checked>
       
       <label class="md-nav__link" for="__nav_4_6">
         Integrations
@@ -1137,12 +1141,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_5" type="checkbox" id="__nav_4_6_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_5" type="checkbox" id="__nav_4_6_5" checked>
       
       <label class="md-nav__link" for="__nav_4_6_5">
         LDAP
@@ -1170,11 +1176,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../LDAP-OKTA/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         LDAP with OKTA
       </a>
+      
     </li>
   
 
@@ -1398,35 +1414,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#roles" class="md-nav__link">
-    Roles
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-user-management" class="md-nav__link">
-    Advanced user management
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ldapad-integration" class="md-nav__link">
-    LDAP/AD Integration
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -1437,53 +1424,51 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/infobyte/faraday/edit/master/docs/Users.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/infobyte/faraday/edit/master/docs/LDAP-OKTA.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h1>
+                <h1 id="ldap-with-okta">LDAP with OKTA<a class="headerlink" href="#ldap-with-okta" title="Permanent link">&para;</a></h1>
 <hr />
-<p>During the Faraday Server setup process an administrator user is created. Default username is <em>faraday</em> and the password will be created randomly. Store this password to be able to change it later on if needed. </p>
+<p>Here are the steps to integrate LDAP to Faraday using OKTA:</p>
+<p>Step 1: Navigate to <a href="https://www.okta.com/free-trial/">OKTA's website</a>.</p>
+<p>Step 2: Sing up.</p>
+<p>Remember your <strong>user</strong> and <strong>workdomain</strong> from <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#117;&#115;&#101;&#114;&#64;&#119;&#111;&#114;&#107;&#100;&#111;&#109;&#97;&#105;&#110;&#46;&#99;&#111;&#109;">&#117;&#115;&#101;&#114;&#64;&#119;&#111;&#114;&#107;&#100;&#111;&#109;&#97;&#105;&#110;&#46;&#99;&#111;&#109;</a></p>
+<p>Step 3: Okta will send you an e-mail with the URL and your temporary password, use those to log-in into Okta.</p>
+<p>Step 4: Enter to the <strong>Directory Integrations Label</strong> from your Okta URL.</p>
+<p>Step 5: Click <strong>Add LDAP Interface</strong></p>
+<p><img alt="add-interface" src="../images/ldap/okta-add-interface.png" /></p>
+<p>Step 6: Configure your Faraday Server. </p>
+<p>Run the following command:</p>
+<p><div class="highlight"><pre><span></span><code>faraday-manage settings -a update ldap
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>enabled = true
+server = &lt;domain&gt;.ldap.okta.com
+domain_dn = OU=users, DC=&lt;domain&gt;, DC=okta, DC=com
+domain =&lt;domain&gt;.okta.com
+admin_group = fadmin
+pentester_group = fpentester
+asset_owner_group = fassetowner
+client_group = fclient
+use_ldaps = true
+use_start_tls = false
+port = 636
+disconnect_timeout = 2.0
+use_local_roles = true
+default_local_role = admin
+bind_format = DN
+bind_dn = dc=&lt;domain&gt;,dc=okta,dc=com
+</code></pre></div></p>
+<p>Check our <a href="../LDAP/">LDAP Article</a> if you need more info.</p>
+<p>Step 7: Restart Faraday Server with:</p>
+<div class="highlight"><pre><span></span><code>systemctl restart faraday-server
+</code></pre></div>
+<p>Step 8: Login into Faraday with the User and Password you used to login into Okta.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>If you wish to change your password, run faraday-manage change-password. </p>
+<p>(Remember you can only access as an Admin user and you can't create more users).</p>
 </div>
-<p>To manage users start a session in the Web UI and then click on the Faraday slider menu on the right of the screen and then on Users : </p>
-<p><img alt="" src="../images/users/menu.png" /></p>
-<p>A list containing all the users will show up, including buttons to create, edit or delete.</p>
-<h2 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h2>
-<p>Faraday supports four types of Roles with different levels of access to the application.</p>
-<ul>
-<li>
-<p>Admin: This role lets the administrator manipulate options regarding users, workspaces, vulnerabilities, reports, etc.</p>
-</li>
-<li>
-<p>Pentester: This role is allowed to access permitted workspaces and create, edit or erase vulnerabilities.</p>
-</li>
-<li>
-<p>Asset Owner: This role is similar to the Client role, but can modify Vulnerabilities' Status and add Comments, so it's useful for people working in remediation. </p>
-</li>
-<li>
-<p>Client: This role is allowed to access permitted workspaces without being able to modify anything.</p>
-</li>
-</ul>
-<p><img alt="" src="../images/users/users.gif" /></p>
-<h2 id="advanced-user-management">Advanced user management<a class="headerlink" href="#advanced-user-management" title="Permanent link">&para;</a></h2>
-<p>You have further options for user management available by using the  faraday-manage  command inside your Faraday Server instance. With said command, you can</p>
-<ul>
-<li>
-<p>change-password: Changes the password of a user.</p>
-</li>
-<li>
-<p>create-superuser: Create ADMIN user for your Faraday instance.</p>
-</li>
-<li>
-<p>rename-user: Change username of a user.</p>
-</li>
-</ul>
-<h2 id="ldapad-integration">LDAP/AD Integration<a class="headerlink" href="#ldapad-integration" title="Permanent link">&para;</a></h2>
-<p>You can also enhance your User management inside Faraday with our LDAP/Active Directory integration. More information available <a href="../LDAP/">here</a>. </p>
                 
               
               
@@ -1499,6 +1484,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../LDAP/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LDAP Configuration" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              LDAP Configuration
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../2-Factor-Authentication/" class="md-footer__link md-footer__link--next" aria-label="Next: 2nd Factor" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              2nd Factor
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

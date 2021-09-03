@@ -20,7 +20,7 @@
     
     
       
-        <title>LDAP - Faraday</title>
+        <title>LDAP Configuration - Faraday</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ldap-professional-corporate" class="md-skip">
+        <a href="#ldap" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              LDAP
+              LDAP Configuration
             
           </span>
         </div>
@@ -1027,13 +1027,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
       
       <label class="md-nav__link" for="__nav_4_5">
-        Extensions
+        Extras
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Extensions" data-md-level="2">
+      <nav class="md-nav" aria-label="Extras" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
-          Extensions
+          Extras
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1144,6 +1144,29 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_5" type="checkbox" id="__nav_4_6_5" checked>
+      
+      <label class="md-nav__link" for="__nav_4_6_5">
+        LDAP
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="LDAP" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          LDAP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -1153,9 +1176,27 @@
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        LDAP
+        LDAP Configuration
       </a>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LDAP-OKTA/" class="md-nav__link">
+        LDAP with OKTA
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1388,8 +1429,47 @@
                   </a>
                 
                 
-                <h1 id="ldap-professional-corporate">LDAP <a href="https://faradaysec.com/pricing/"><p class="professional">PROFESSIONAL</p></a> <a href="https://faradaysec.com/pricing/"><p class="corporate">CORPORATE</p></a><a class="headerlink" href="#ldap-professional-corporate" title="Permanent link">&para;</a></h1>
-<p>If you're already a client and want to know more about this feature, please visit our <a href="https://support.faradaysec.com/portal/kb/articles/ldap">Knowledge Base</a>.</p>
+                <h1 id="ldap">LDAP<a class="headerlink" href="#ldap" title="Permanent link">&para;</a></h1>
+<hr />
+<div class="admonition warning">
+<p class="admonition-title">LDAP Users</p>
+<p>For the time being Faraday doesn't support a hybrid installation using both LDAP and local users. Enabling LDAP disables local users and vice versa.</p>
+</div>
+<p>In order to configure LDAP, run the following command:</p>
+<div class="highlight"><pre><span></span><code>faraday-manage settings -a update ldap
+</code></pre></div>
+<p>Then update every field according to the configuration on-prem.</p>
+<div class="highlight"><pre><span></span><code>$ faraday-manage settings -a update ldap
+Update settings for: ldap
+enabled [False]:
+use_local_roles [True]:
+default_local_role [admin]:
+admin_group []:
+asset_owner_group []:
+client_group []:
+pentester_group []:
+disconnect_timeout [2.0]:
+server []:
+port [389]:
+use_ldaps [False]:
+use_start_tls [False]:
+domain []:
+domain_dn []:
+bind_format [CN]:
+bind_dn []:
+user_class [user]:
+user_attribute [sAMAccountName]:
+group_class [group]:
+paginated_fetch [False]:
+Do you confirm your changes on ldap?
+</code></pre></div>
+<p>Remember to restart the server after doing changes!</p>
+<div class="highlight"><pre><span></span><code>systemctl restart faraday-server
+</code></pre></div>
+<div class="admonition danger">
+<p class="admonition-title">Warning</p>
+<p>If <strong>use_local_roles</strong> is set to true, any user on the AD will be allowed to use Faraday.</p>
+</div>
                 
               
               
@@ -1425,13 +1505,13 @@
       
       
         
-        <a href="../2-Factor-Authentication/" class="md-footer__link md-footer__link--next" aria-label="Next: 2nd Factor" rel="next">
+        <a href="../LDAP-OKTA/" class="md-footer__link md-footer__link--next" aria-label="Next: LDAP with OKTA" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              2nd Factor
+              LDAP with OKTA
             </div>
           </div>
           <div class="md-footer__button md-icon">

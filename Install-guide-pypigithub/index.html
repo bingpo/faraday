@@ -1079,13 +1079,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_5" type="checkbox" id="__nav_4_5" >
       
       <label class="md-nav__link" for="__nav_4_5">
-        Extensions
+        Extras
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Extensions" data-md-level="2">
+      <nav class="md-nav" aria-label="Extras" data-md-level="2">
         <label class="md-nav__title" for="__nav_4_5">
           <span class="md-nav__icon md-icon"></span>
-          Extensions
+          Extras
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1192,10 +1192,49 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_6_5" type="checkbox" id="__nav_4_6_5" >
+      
+      <label class="md-nav__link" for="__nav_4_6_5">
+        LDAP
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="LDAP" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_6_5">
+          <span class="md-nav__icon md-icon"></span>
+          LDAP
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
     <li class="md-nav__item">
       <a href="../LDAP/" class="md-nav__link">
-        LDAP
+        LDAP Configuration
       </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LDAP-OKTA/" class="md-nav__link">
+        LDAP with OKTA
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1469,15 +1508,21 @@ source faraday_venv/bin/activate
 <p>You can install Faraday from PyPI by running the following command:</p>
 <div class="highlight"><pre><span></span><code>pip3 install faradaysec
 </code></pre></div>
+<div class="admonition info">
+<p>Postgresql is needed to install and use faraday</p>
+</div>
 <h2 id="installation-from-github">Installation from GitHub<a class="headerlink" href="#installation-from-github" title="Permanent link">&para;</a></h2>
 <p>First, clone the repository:</p>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/infobyte/faraday.git
+<p><div class="highlight"><pre><span></span><code>git clone git@github.com:infobyte/faraday.git
 </code></pre></div>
-<p>Move into the repo's folder:
-<div class="highlight"><pre><span></span><code>cd faraday/
-</code></pre></div></p>
-<p>Install Faraday:
-<div class="highlight"><pre><span></span><code>pip3 install .
+Clone Frontend:
+<div class="highlight"><pre><span></span><code>git clone https://github.com/infobyte/faraday_angular_frontend.git faraday/frontend
+</code></pre></div>
+Move into the repo's folder:
+<div class="highlight"><pre><span></span><code>cd faraday
+</code></pre></div>
+Install Faraday:
+<div class="highlight"><pre><span></span><code>pip install .
 </code></pre></div></p>
 <h2 id="after-installation">After Installation<a class="headerlink" href="#after-installation" title="Permanent link">&para;</a></h2>
 <p>Once the installation is completed, make sure you have a PostgreSQL (local or <a href="../Remote-PostgreSQL">remote</a>)</p>
@@ -1485,9 +1530,16 @@ source faraday_venv/bin/activate
 This will generate a random password, use it for <a href="http://localhost:5985" target="_blank">Faraday Web UI</a> and change it
 <div class="highlight"><pre><span></span><code>faraday-manage initdb
 </code></pre></div></p>
-<p>Start Faraday server by running:
+<p>Start Faraday server by running:</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">As a service</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>sudo systemctl start faraday-server
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">As a process</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code>faraday-server
-</code></pre></div></p>
+</code></pre></div>
+</div>
+</div>
 <p>We highly recommend you to check our <a href="../First-Steps">First Steps</a> guide.</p>
                 
               
