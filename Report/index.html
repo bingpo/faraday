@@ -20,7 +20,7 @@
     
     
       
-        <title>Report - Faraday</title>
+        <title>Executive Report - Faraday</title>
       
     
     
@@ -113,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Report
+              Executive Report
             
           </span>
         </div>
@@ -710,6 +710,29 @@
     
   
   
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_1" type="checkbox" id="__nav_3_5_1" checked>
+      
+      <label class="md-nav__link" for="__nav_3_5_1">
+        Report
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Report" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_1">
+          <span class="md-nav__icon md-icon"></span>
+          Report
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -719,12 +742,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Report
+          Executive Report
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Report
+        Executive Report
       </a>
       
         
@@ -742,13 +765,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#intro" class="md-nav__link">
-    Intro
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#managing-executive-reports" class="md-nav__link">
     Managing Executive Reports
   </a>
@@ -760,18 +776,12 @@
     Making a report
   </a>
   
-    <nav class="md-nav" aria-label="Making a report">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#technical-details-tab" class="md-nav__link">
-    Technical details tab
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#executive-and-technical-details-tabs" class="md-nav__link">
+    Executive and Technical details tabs
+  </a>
   
 </li>
       
@@ -783,8 +793,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deleting-a-workspace" class="md-nav__link">
-    Deleting a Workspace
+  <a href="#deleting-a-report" class="md-nav__link">
+    Deleting a Report
   </a>
   
 </li>
@@ -813,6 +823,36 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../How-to-build-your-template/" class="md-nav__link">
+        Building a Template
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Jinja2-context/" class="md-nav__link">
+        Jinja2 Context
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1510,13 +1550,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#intro" class="md-nav__link">
-    Intro
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#managing-executive-reports" class="md-nav__link">
     Managing Executive Reports
   </a>
@@ -1528,18 +1561,12 @@
     Making a report
   </a>
   
-    <nav class="md-nav" aria-label="Making a report">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#technical-details-tab" class="md-nav__link">
-    Technical details tab
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#executive-and-technical-details-tabs" class="md-nav__link">
+    Executive and Technical details tabs
+  </a>
   
 </li>
       
@@ -1551,8 +1578,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#deleting-a-workspace" class="md-nav__link">
-    Deleting a Workspace
+  <a href="#deleting-a-report" class="md-nav__link">
+    Deleting a Report
   </a>
   
 </li>
@@ -1595,54 +1622,55 @@
                 
                 
                 <h1 id="executive-report">Executive Report<a class="headerlink" href="#executive-report" title="Permanent link">&para;</a></h1>
-<h2 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">&para;</a></h2>
+<hr />
 <p>No more 3AM reporting!</p>
 <p>The <strong>Executive Report</strong> feature lets you create (as the name implies) reports using the results obtained in each workspace. When an Executive Report is created, all the data from the Status Report is automatically processed and placed in a Word compatible document that can then be downloaded</p>
 <h2 id="managing-executive-reports">Managing Executive Reports<a class="headerlink" href="#managing-executive-reports" title="Permanent link">&para;</a></h2>
-<p>To manage your reports you need to access Faraday's Web UI and click on the Executive Report icon:</p>
-<p><img alt="Icon" src="../images/executive_reports/icon.png" /></p>
+<p>To manage your reports you need to access Faraday's Web UI and go to Insight -&gt; Report.</p>
 <p>All the reports will be listed, including their information, status and link to download.</p>
 <h2 id="making-a-report">Making a report<a class="headerlink" href="#making-a-report" title="Permanent link">&para;</a></h2>
-<p>To create a new report, navigate to the Executive Report component and click on New. A form will open asking for the following fields:</p>
+<p>To create a new report, click on <strong>New</strong>. A form will open asking for the following fields:</p>
 <ul>
-<li><strong>Report Name</strong> - name of the report file</li>
-<li><strong>USe only confirmed vulns for this report</strong> - if this checkbox is selected, no false positives will be present in the final report</li>
-<li><strong>Tags</strong> - when selected, vulnerabilities will be filtered by the selected tag. If more than one tag is selected, all vulns containing one of those will be present in the final report</li>
-<li><strong>Template</strong> - select the template to use as a base for your report. Depending on the selected dataset the options will change. </li>
 <li><strong>Title</strong> - this is the name that will be used to create the cover of the report.</li>
 <li><strong>Client Name</strong> - Client name to be used inside the report.</li>
+<li><strong>Template</strong> - select the template to use as a base for your report. Depending on the selected dataset the options will change. </li>
 </ul>
 <p>To edit a report, select it and click on the Edit button. A modal will appear allowing you to modify all the report fields. Save it and a brand new report will be generated, keeping the original version intact. </p>
 <p>If, instead, you want a new report that is exactly like an existing one but with the current data of your workspace, you can click on the Regenerate button in the reports list. Reports can only be regenerated one at a time, so the regeneration buttons are disabled while this action is being performed.</p>
-<h3 id="technical-details-tab">Technical details tab<a class="headerlink" href="#technical-details-tab" title="Permanent link">&para;</a></h3>
+<h2 id="executive-and-technical-details-tabs">Executive and Technical details tabs<a class="headerlink" href="#executive-and-technical-details-tabs" title="Permanent link">&para;</a></h2>
 <p>The following are a sort of placeholder fields for information that's commonly added to most reports. They are text fields and can be used for any relevant information, not just for what they're named after:</p>
 <ul>
-<li>Scope   </li>
-<li>Objectives   </li>
 <li>Summary   </li>
 <li>Conclusions   </li>
 <li>Recommendations   </li>
+<li>Scope   </li>
+<li>Objectives</li>
 </ul>
 <p><img alt="Excecutive" src="../images/executive_reports/executive_report_1.png" /></p>
 <p>Faraday processes all the information and spits out a shiny new report that is automatically available for download.</p>
 <p><img alt="Report" src="../images/executive_reports/template_faraday_word.png" /></p>
 <h2 id="filtering">Filtering<a class="headerlink" href="#filtering" title="Permanent link">&para;</a></h2>
-<p>There are two main ways to manage the data that goes into the final report - <strong>confirming</strong> vulns and <strong>tagging them</strong> .</p>
-<p>By default all of the vulnerabilities added <strong>manually</strong> are set as confirmed and all of those added <strong>by a Plugin</strong> are set as false positives . If the checkbox <strong>"use only confirmed vulns"</strong> is selected, the report will only contain <strong>confirmed</strong> findings.</p>
-<p>If you need a custom report that includes only some of the findings in the workspace, you can also tag the desired vulnerabilities and then create a report only with that tag.</p>
-<p>At least one vulnerability must be tagged in order to have the option to generate a tag-filtered report. When the form opens an option to select tags will appear. Keep in mind that one or more tags can be selected.</p>
-<p>These two parameters (confirmed and tags) can be mixed to create different outcomes.</p>
+<p>If you need a custom report that includes only some findings in the workspace, you can also use the filters to bring those specific vulnerabilities.</p>
+<p>These filters can be mixed to create different outcomes.</p>
 <p><img alt="Excecutive_report_for_test" src="../images/executive_reports/executive_report_2.png" /></p>
-<h2 id="deleting-a-workspace">Deleting a Workspace<a class="headerlink" href="#deleting-a-workspace" title="Permanent link">&para;</a></h2>
-<p>From the Executive Report window, select the document and click on Delete <img alt="delete" src="../images/executive_reports/delete_button.png" /></p>
+<h2 id="deleting-a-report">Deleting a Report<a class="headerlink" href="#deleting-a-report" title="Permanent link">&para;</a></h2>
+<p>From the Executive Report window, select the document and click on <strong>Delete</strong>. <img alt="delete" src="../images/executive_reports/delete_button.png" /></p>
 <h2 id="templates">Templates<a class="headerlink" href="#templates" title="Permanent link">&para;</a></h2>
-<p>You can now create Custom Fields with <strong>Markdown</strong></p>
+<p>We use Jinja2 to create Report Templates. Check this <a href="../How-to-build-your-template/">Article</a> to get more information!</p>
 <h3 id="datasets">Datasets<a class="headerlink" href="#datasets" title="Permanent link">&para;</a></h3>
-<p>Faraday provides two different datasets to create Executive Reports - <em>generic</em> and <em>grouped</em>.</p>
+<p>Faraday provides two different datasets to create Executive Reports - <strong>generic</strong> and <strong>grouped</strong>.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Generic</label><div class="tabbed-content">
 <p>The  <strong>generic  dataset</strong>  provides one entry for each individual vulnerability with all of its fields readily available as a dictionary. The field parent contains an ID corresponding to the Vulnerability's parent (either a Host or a Service).</p>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Grouped</label><div class="tabbed-content">
 <p>The  <strong>grouped  dataset</strong>  groups vulnerabilities by name and description. If two or more vulnerabilities share the same name and description, they will be presented as one. The field parent contains a Python Dictionary-style object with the parent IDs as keys and a Python Dictionary-style object containing evidence_subdoc, data and target as values. Tags and references will be merged for vulnerabilities that are grouped and not separated by parent.</p>
-<p>Keep in mind that each template should be designed for a specific dataset and that these are not interchangeable. The default templates that come with your instance are located at</p>
-<p><code>/home/faraday/.faraday/executive_reports_templates/</code></p>
+</div>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Keep in mind that each template should be designed for a specific dataset and that these are not interchangeable. The default templates that come with your instance are located at
+<code>/home/faraday/.faraday/executive_reports_templates/</code></p>
+</div>
                 
               
               
@@ -1678,13 +1706,13 @@
       
       
         
-        <a href="../Analysis/" class="md-footer__link md-footer__link--next" aria-label="Next: Analysis" rel="next">
+        <a href="../How-to-build-your-template/" class="md-footer__link md-footer__link--next" aria-label="Next: Building a Template" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Analysis
+              Building a Template
             </div>
           </div>
           <div class="md-footer__button md-icon">
